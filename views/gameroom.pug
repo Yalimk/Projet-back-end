@@ -1,0 +1,11 @@
+doctype html
+html(lang='fr')
+include includes/head.pug
+script(defer src="/js/client.js")
+script(src="/socket.io/socket.io.js")
+body
+  h1 Bienvenue dans la salle de jeu, #{login.charAt(0).toUpperCase() + login.slice(1)}
+  p Dès qu'un autre joueur sera présent, votre avatar apparaîtra et la partie pourra commencer ! Soyez prêt !
+  p Le but du jeu est d'atteindre l'autre bout du terrain plus rapidement que votre adversaire #[strong 3 FOIS] pour gagner la partie !
+  div#win
+  p#greeting #{login}

@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  align-items: center;
+  background-color: #bfc0b8;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  justify-content: flex-start;
+  margin: 30px;
+  min-height: 900px;
+  min-width: 900px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 900px;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#win {
+  align-items: center;
+  background-color: lightskyblue;
+  border: 3px dashed black;
+  box-shadow: 2px 2px 5px 5px black;
+  display: none;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+}
+
+#greeting {
+  display: none;
+}
+
+/* .score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+} */
