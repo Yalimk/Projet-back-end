@@ -12,7 +12,7 @@ const app = express();
 const urlDb = 'mongodb+srv://admin:adminpassword@diwjs13acs.ieuak.gcp.mongodb.net/?retryWrites=true&w=majority';
 const dbName = 'silly-race';
 const collectionName = 'users';
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 9090;
 const cors = require('cors');
 
 
