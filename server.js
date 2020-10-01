@@ -152,8 +152,8 @@ app.post('/processing', (req, res, next) => {
   });
 });
 
-const server = app.listen(PORT, () => {
-  console.log(`Now listening on port ${PORT}.`)
+const server = app.listen(9090, () => {
+  console.log(`Now listening on port 9090.`)
 });
 
 /************* PARTIE SOCKET.IO *************/
