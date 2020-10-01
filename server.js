@@ -13,12 +13,22 @@ const urlDb = 'mongodb+srv://admin:adminpassword@diwjs13acs.ieuak.gcp.mongodb.ne
 const dbName = 'silly-race';
 const collectionName = 'users';
 const PORT = process.env.PORT || 9090;
+const cors = require('cors');
+
 
 /************* MIDDLEWARES *************/
 
 app.set('view engine', 'pug');
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors());
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use('/js', express.static(__dirname + '/public/script'));
 app.use('/css', express.static(__dirname + '/public/style'));
