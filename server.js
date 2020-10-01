@@ -12,7 +12,7 @@ const app = express();
 const urlDb = 'mongodb+srv://admin:adminpassword@diwjs13acs.ieuak.gcp.mongodb.net/?retryWrites=true&w=majority';
 const dbName = 'silly-race';
 const collectionName = 'users';
-const PORT = process.env.PORT || 9090;
+const PORT = process.env.PORT;
 const cors = require('cors');
 
 
@@ -152,8 +152,8 @@ app.post('/processing', (req, res, next) => {
   });
 });
 
-const server = app.listen(9090, () => {
-  console.log(`Now listening on port 9090.`)
+const server = app.listen(PORT, () => {
+  console.log(`Now listening on port ${PORT}.`)
 });
 
 /************* PARTIE SOCKET.IO *************/
