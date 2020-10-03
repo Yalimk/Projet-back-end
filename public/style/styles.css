@@ -11,7 +11,8 @@ html {
 
 body {
   align-items: center;
-  background-color: #bfc0b8;
+  /* background-color: #bfc0b8; */
+  background-image: url('/img/terrain.png');
   border: 2px solid white;
   display: flex;
   flex-direction: column;

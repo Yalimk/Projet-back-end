@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
 
 app.use('/js', express.static(__dirname + '/public/script'));
 app.use('/css', express.static(__dirname + '/public/style'));
-app.use('/img', express.static(__dirname + 'public/images'));
+app.use('/img', express.static(__dirname + '/public/images'));
 
 app.use(favicon(__dirname + '/public/images/favicon.png'));
 
@@ -164,7 +164,6 @@ const connectedPlayers = [];
 
 io.on('connect', socket => {
   console.log(`Le client ${socket.id} est connecté`);
-
   socket.on('playerPseudo', pseudo => {
     socket.login = pseudo;
     if (!connectedPlayers.includes(socket.login)) {
