@@ -1,5 +1,4 @@
-// const socket = io('https://alexandre-masson.herokuapp.com');
-const socket = io('http://localhost:9090');
+const socket = io('https://alexandre-masson.herokuapp.com');
 let avatarDiv;
 let scoreDiv;
 let winDiv = document.getElementById('win');
@@ -66,8 +65,7 @@ socket.on('connect', () => {
       winDiv.innerText = `${avatarDiv.innerText} remporte la partie !
       Redirection vers la page d'accueil dans 5 secondes`;
       setTimeout(() => {
-        // window.location = 'https://alexandre-masson.herokuapp.com/login';
-        window.location = 'http://localhost:9090/login';
+        window.location = 'https://alexandre-masson.herokuapp.com/login';
       }, 5000);
     }
   });
